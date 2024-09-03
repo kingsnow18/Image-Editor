@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    background-color: #f0f0f0; /* Subtle background for overall page */
+    color: #333;
+}
+
+.editor {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffaf0; /* Soft background color */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+    width: 260px;
+    background: #fafafa; /* Lighter background for contrast */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+.toolbar-item {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background 0.3s ease, transform 0.3s ease; /* Add hover effect */
+}
+
+.toolbar-item:hover {
+    background-color: #f0f0f0; /* Slight hover effect */
+    transform: translateY(-2px);
+}
+
+.tool-label {
+    display: block;
+    margin-bottom: 8px; /* Increased margin for clarity */
+    color: #555;
+    font-weight: 600; /* Slightly bolder for readability */
+}
+
+.tool-input {
+    width: 100%;
+    appearance: none;
+    height: 8px; /* Slightly thicker slider */
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.tool-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px; /* Slightly larger thumb */
+    height: 16px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.tool-input::-webkit-slider-thumb:hover {
+    background: #333;
+    transform: scale(1.1); /* Hover effect for thumb */
+}
+
+.image-area {
+    flex-grow: 1;
+    padding: 30px; /* Increased padding for more space */
+    background-color: #ffecd1; /* Softer background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #ddd; /* Subtle separator */
+}
+
+#canvas {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Slightly rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: box-shadow 0.3s ease;
+}
+
+#canvas:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Enhanced Upload Button Styles */
+.upload-button {
+    display: block;
+    padding: 12px; /* Slightly increased padding */
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: #28a745; /* Bootstrap Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.upload-button:hover {
+    background-color: #218838; /* Darker Green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.upload-button:active {
+    background-color: #1e7e34; /* Even Darker Green */
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on active */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin-top: 8px; /* Increased margin for better separation */
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+button:active {
+    background-color: #004494;
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on active */
+}

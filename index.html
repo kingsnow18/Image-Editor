@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="editor">
+        <div class="toolbar">
+            <div class="toolbar-item">
+                <input type="file" id="imageFileInput" style="display: none">
+                <label for="imageFileInput" class="upload-button"> Upload Image</label>
+            </div>
+            <div class="toolbar-item">
+                <label class="tool-label" for="brightness">Brightness</label>
+                <input class="tool-input" type="range" id="brightness" min="0" max="200">
+            </div>
+            <div class="toolbar-item">
+                <label class="tool-label" for="saturation">Saturation</label>
+                <input class="tool-input" type="range" id="saturation" min="0" max="200">
+            </div>
+            <div class="toolbar-item">
+                <label class="tool-label" for="blur">Blur</label>
+                <input class="tool-input" type="range" id="blur" min="0" max="25">
+            </div>
+            <div class="toolbar-item">
+                <label class="tool-label" for="inversion">Inversion</label>
+                <input class="tool-input" type="range" id="inversion" min="0" max="100">
+            </div>
+            <div class="toolbar-item">
+                <button id="cropButton">Crop</button>
+                <button id="addTextButton">Add Text</button>
+            </div>
+            <div class="toolbar-item">
+                <label class="tool-label" for="textColor">Text Color</label>
+                <input type="color" id="textColor" value="#000000">
+            </div> 
+            <div class="toolbar-item">
+                <label class="tool-label" for="textSize">Text Size</label>
+                <input type="range" id="textSize" min="10" max="100" value="20">
+            </div>   
+            <div class="toolbar-item">
+                <button id="undoButton">Undo</button>
+            </div>                                
+        </div>
+        <div class="image-area">
+            <canvas id="canvas" height="500" width="500"></canvas>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
